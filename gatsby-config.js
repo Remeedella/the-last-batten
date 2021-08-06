@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "The Last Batten",
     siteUrl: "https://www.thelastbatten.com",
-    description: "some info",
+    description: "the last batten photography website",
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -27,6 +27,7 @@ module.exports = {
         fonts: [
           `Bebas Neue`,
           `source sans pro\:200,300,400`, // you can also specify font weights and styles
+          `Parisienne`,
         ],
         display: 'swap'
       }

@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "gatsby";
 
 export default function Header() {
+
     return (
         
         <header className="fixed-top bg-white">
@@ -19,13 +20,10 @@ export default function Header() {
               <div className="align-self-end text-nowrap py-1 ps-1 d-inline-block" style={{width: '60%'}}>
                 
                   <svg width="100%" height="100%" viewBox="0 0 844 356" style={{fillRule: 'evenodd', clipRule: 'evenodd', strokeLinejoin: 'round', strokeMiterlimit: 2}}>
-                    <rect id="Artboard1" x={0} y={0} width="843.75" height="355.297" style={{fill: 'none'}} />
-                    <text x="53.066px" y="225.807px" style={{fontFamily: '"BebasNeue-Regular", "Bebas Neue", sans-serif', fontSize: '146.767px'}}>T
-                      <tspan x="105.047px 165.024px 216.862px 239.711px 289.407px 346.243px 399.366px 451.347px 474.195px 531.888px 582.584px 635.992px 687.973px 739.811px " y="225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px ">HE LAST BATTEN</tspan>
-                    </text>
-                    <text x="65.48px" y="290.078px" style={{fontFamily: '"SourceSansPro-SemiBold", "Source Sans Pro", sans-serif', fontWeight: 600, fontSize: '62.698px', fill: '#9e94be'}}>P
-                      <tspan x="97.559px 133.749px 169.178px 198.11px 234.859px 269.273px 301.555px 332.416px 364.495px 400.686px 428.653px 441.343px 476.315px 489.004px 518.749px 535.6px 569.862px 599.708px 636.456px 670.566px 701.427px 733.506px 769.696px " y="290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px ">HOTOGRAPHY &amp; VIDEOGAPHY</tspan>
-                    </text>
+                  <rect x="71.51" y="236.18" width="726.22" height="63.767" fill="#FBFBE7" fill-rule="evenodd" stroke-width="1.0005"/>
+ <rect width="843.75" height="355.3" fill="none"/>
+ <text x="53.066px" y="225.807px" font-family="'BebasNeue-Regular', 'Bebas Neue', sans-serif" font-size="146.77px">T<tspan x="105.047px 165.024px 216.862px 239.711px 289.407px 346.243px 399.366px 451.347px 474.195px 531.888px 582.584px 635.992px 687.973px 739.811px " y="225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px ">HE LAST BATTEN</tspan></text>
+ <text transform="scale(.99691 1.0031)" x="66.575562" y="289.18109" fill="#9e94be" font-family="SourceSansPro-SemiBold, 'Source Sans Pro', sans-serif" font-size="62.504px" font-weight="600" stroke-width=".99691">P<tspan x="98.555367 134.63348 169.95293 198.79549 235.43085 269.73846 301.92062 332.68625 364.66602 400.74518 428.62567 441.27643 476.14032 488.79007 518.44312 535.24194 569.39801 599.15186 635.78613 669.79065 700.55627 732.53607 768.6142" y="289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109" stroke-width=".99691">HOTOGRAPHY &amp; VIDEOGAPHY</tspan></text>
                   </svg>
               </div>
             </div>
@@ -38,13 +36,10 @@ export default function Header() {
               <div className="align-self-end text-nowrap py-1 ps-1 d-inline-block" style={{width: '38%'}}>
                
                   <svg width="100%" height="100%" viewBox="0 0 844 356" style={{fillRule: 'evenodd', clipRule: 'evenodd', strokeLinejoin: 'round', strokeMiterlimit: 2}}>
-                    <rect id="Artboard1" x={0} y={0} width="843.75" height="355.297" style={{fill: 'none'}} />
-                    <text x="53.066px" y="225.807px" style={{fontFamily: '"BebasNeue-Regular", "Bebas Neue", sans-serif', fontSize: '146.767px'}}>T
-                      <tspan x="105.047px 165.024px 216.862px 239.711px 289.407px 346.243px 399.366px 451.347px 474.195px 531.888px 582.584px 635.992px 687.973px 739.811px " y="225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px ">HE LAST BATTEN</tspan>
-                    </text>
-                    <text x="65.48px" y="290.078px" style={{fontFamily: '"SourceSansPro-SemiBold", "Source Sans Pro", sans-serif', fontWeight: 600, fontSize: '62.698px', fill: '#9e94be'}}>P
-                      <tspan x="97.559px 133.749px 169.178px 198.11px 234.859px 269.273px 301.555px 332.416px 364.495px 400.686px 428.653px 441.343px 476.315px 489.004px 518.749px 535.6px 569.862px 599.708px 636.456px 670.566px 701.427px 733.506px 769.696px " y="290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px ">HOTOGRAPHY &amp; VIDEOGAPHY</tspan>
-                    </text>
+                  <rect x="71.51" y="236.18" width="726.22" height="63.767" fill="#FBFBE7" fill-rule="evenodd" stroke-width="1.0005"/>
+ <rect width="843.75" height="355.3" fill="none"/>
+ <text x="53.066px" y="225.807px" font-family="'BebasNeue-Regular', 'Bebas Neue', sans-serif" font-size="146.77px">T<tspan x="105.047px 165.024px 216.862px 239.711px 289.407px 346.243px 399.366px 451.347px 474.195px 531.888px 582.584px 635.992px 687.973px 739.811px " y="225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px ">HE LAST BATTEN</tspan></text>
+ <text transform="scale(.99691 1.0031)" x="66.575562" y="289.18109" fill="#9e94be" font-family="SourceSansPro-SemiBold, 'Source Sans Pro', sans-serif" font-size="62.504px" font-weight="600" stroke-width=".99691">P<tspan x="98.555367 134.63348 169.95293 198.79549 235.43085 269.73846 301.92062 332.68625 364.66602 400.74518 428.62567 441.27643 476.14032 488.79007 518.44312 535.24194 569.39801 599.15186 635.78613 669.79065 700.55627 732.53607 768.6142" y="289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109" stroke-width=".99691">HOTOGRAPHY &amp; VIDEOGAPHY</tspan></text>
                   </svg>
                 
               </div>
@@ -103,13 +98,10 @@ export default function Header() {
               </div>
               <div className="align-self-end text-nowrap py-1 ps-1 d-inline-block" style={{maxWidth: '35%', paddingRight: '20px'}}>
                   <svg width="100%" height="100%" viewBox="0 0 844 356" style={{fillRule: 'evenodd', clipRule: 'evenodd', strokeLinejoin: 'round', strokeMiterlimit: 2}}>
-                    <rect id="Artboard1" x={0} y={0} width="843.75" height="355.297" style={{fill: 'none'}} />
-                    <text x="53.066px" y="225.807px" style={{fontFamily: '"BebasNeue-Regular", "Bebas Neue", sans-serif', fontSize: '146.767px'}}>T
-                      <tspan x="105.047px 165.024px 216.862px 239.711px 289.407px 346.243px 399.366px 451.347px 474.195px 531.888px 582.584px 635.992px 687.973px 739.811px " y="225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px ">HE LAST BATTEN</tspan>
-                    </text>
-                    <text x="65.48px" y="290.078px" style={{fontFamily: '"SourceSansPro-SemiBold", "Source Sans Pro", sans-serif', fontWeight: 600, fontSize: '62.698px', fill: '#9e94be'}}>P
-                      <tspan x="97.559px 133.749px 169.178px 198.11px 234.859px 269.273px 301.555px 332.416px 364.495px 400.686px 428.653px 441.343px 476.315px 489.004px 518.749px 535.6px 569.862px 599.708px 636.456px 670.566px 701.427px 733.506px 769.696px " y="290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px 290.078px ">HOTOGRAPHY &amp; VIDEOGAPHY</tspan>
-                    </text>
+                  <rect x="71.51" y="236.18" width="726.22" height="63.767" fill="#FBFBE7" fill-rule="evenodd" stroke-width="1.0005"/>
+ <rect width="843.75" height="355.3" fill="none"/>
+ <text x="53.066px" y="225.807px" font-family="'BebasNeue-Regular', 'Bebas Neue', sans-serif" font-size="146.77px">T<tspan x="105.047px 165.024px 216.862px 239.711px 289.407px 346.243px 399.366px 451.347px 474.195px 531.888px 582.584px 635.992px 687.973px 739.811px " y="225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px 225.807px ">HE LAST BATTEN</tspan></text>
+ <text transform="scale(.99691 1.0031)" x="66.575562" y="289.18109" fill="#9e94be" font-family="SourceSansPro-SemiBold, 'Source Sans Pro', sans-serif" font-size="62.504px" font-weight="600" stroke-width=".99691">P<tspan x="98.555367 134.63348 169.95293 198.79549 235.43085 269.73846 301.92062 332.68625 364.66602 400.74518 428.62567 441.27643 476.14032 488.79007 518.44312 535.24194 569.39801 599.15186 635.78613 669.79065 700.55627 732.53607 768.6142" y="289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109 289.18109" stroke-width=".99691">HOTOGRAPHY &amp; VIDEOGAPHY</tspan></text>
                   </svg>
               </div>
               <div className="d-flex ms-auto text-nowrap align-self-end" style={{paddingBottom: '15px'}}>
@@ -157,7 +149,6 @@ export default function Header() {
                 </div>
               </nav>
             </div>
-            <br />
             <nav className="bg-white d-flex mx-auto navbar navbar-light d-md-none" style={{width: '90%'}}>
               <div className="container">
                 <StaticImage src="../images/instagram-ic.svg" className="img-fluid" />
@@ -203,7 +194,6 @@ export default function Header() {
               </div>
             </nav>
           </div>
-          <br />
         </div>
       </header>
     )

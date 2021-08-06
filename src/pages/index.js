@@ -3,6 +3,8 @@ import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import { photos } from "../components/photos";
 import Layout from "../components/Layout";
+import { Helmet } from "react-helmet";
+import Header from "../components/Header";
 
 export default function Home() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -20,9 +22,12 @@ export default function Home() {
   return (
     
     <Layout>
-      
+    <Header />
     <main>
-      
+    <Helmet>
+<title>The Last Batten - Home</title>
+<meta name="description" content="Photography & Videography Website" />
+    </Helmet>
     <Gallery photos={photos} direction={"column"} onClick={openLightbox} />
     <div>
       <ModalGateway>

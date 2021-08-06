@@ -34,7 +34,7 @@ $theme-colors: map-remove($theme-colors, "info", "warning", "dark", "danger");
 // 5. Add additional custom code here
 
 body {
-    padding-top: 15rem;
+    padding-top: 247px;
     font-family: 'Source Sans Pro', sans-serif !important;
 }
 
@@ -58,3 +58,22 @@ a {
 #content {
     min-height: 100vh;
 }
+
+.title {
+    font-family: 'Parisienne', cursive;
+    color: #9E94BE;
+}
+
+// 6. -media queries - //
+
+@include media-breakpoint-up(sm) { 
+    body {
+        padding-top: 300px;
+    }
+ }
+
+ @include media-breakpoint-up(md) { 
+     body {
+         padding-top: 205px;
+     }
+  }
