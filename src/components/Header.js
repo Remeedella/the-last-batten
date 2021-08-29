@@ -14,7 +14,7 @@ export default function Header() {
             <div className="d-flex d-md-none">
               <div style={{width: '40%'}}>
               <Link to="/">
-                <StaticImage src="../images/logo.png" alt="logo" className="img-fluid ps-2 position-relative" style={{maxHeight: '180px', top: '8px'}} />
+                <StaticImage src="../images/logo.svg" alt="logo" className="img-fluid ps-2 position-relative" style={{maxHeight: '180px', top: '8px'}} />
                 </Link>
               </div>
               <div className="align-self-end text-nowrap py-1 ps-1 d-inline-block" style={{width: '60%'}}>
@@ -30,7 +30,7 @@ export default function Header() {
             <div className="d-none d-md-flex d-lg-none">
               <div style={{width: '25%'}}>
               <Link to="/">
-                <StaticImage src="../images/logo.png" alt="logo" className="img-fluid ps-2 position-relative" style={{maxHeight: '180px', top: '8px'}} />
+                <StaticImage src="../images/logo.svg" alt="logo" className="img-fluid ps-2 position-relative" style={{maxHeight: '180px', top: '8px'}} />
                 </Link>
               </div>
               <div className="align-self-end text-nowrap py-1 ps-1 d-inline-block" style={{width: '38%'}}>
@@ -93,7 +93,7 @@ export default function Header() {
             <div className="d-none d-lg-flex d-xxl-one">
               <div style={{minWidth: '170px'}}>
               <Link to="/">
-                <StaticImage src="../images/logo.png" alt="logo" className="img-fluid ps-2 position-relative" style={{maxHeight: '180px', top: '8px'}} />
+                <StaticImage src="../images/logo.svg" alt="logo" className="img-fluid ps-2 position-relative" style={{maxHeight: '180px', top: '8px'}} />
                 </Link>
               </div>
               <div className="align-self-end text-nowrap py-1 ps-1 d-inline-block" style={{maxWidth: '35%', paddingRight: '20px'}}>

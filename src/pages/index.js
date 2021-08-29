@@ -4,6 +4,7 @@ import Carousel, { Modal, ModalGateway } from "react-images";
 import { photos } from "../components/photos";
 import Layout from "../components/Layout";
 import { Helmet } from "react-helmet";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
 <title>The Last Batten - Home</title>
 <meta name="description" content="Photography & Videography Website" />
     </Helmet>
+    <div className="container px-xs-1 py-xs-1 px-md-3 py-5-md"><br /></div>    
     <Gallery photos={photos} direction={"column"} onClick={openLightbox} />
     <div>
       <ModalGateway>
@@ -46,5 +48,6 @@ export default function Home() {
       </ModalGateway>
     </div>
     </main>
+    <Footer />
     </Layout>
   )}

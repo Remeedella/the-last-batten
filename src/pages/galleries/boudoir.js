@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
-import { photos } from "../../components/photosLifestyle";
+import { photos } from "../../components/photosBoudoir";
 import Layout from "../../components/Layout";
 import Header from "../../components/Header";
 import Other from "../../components/Other";
@@ -9,7 +9,7 @@ import Footer from "../../components/Footer";
 import { Helmet } from "react-helmet";
 import { Link } from "gatsby"
 
-export default function Lifestyle() {
+export default function Boudoir() {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
@@ -26,12 +26,12 @@ export default function Lifestyle() {
     <Layout>
       <Header />
     <Helmet>
-    <title>Lifestyle Gallery</title>
+    <title>Boudoir Gallery</title>
     <meta name="description" content="Photography & Videography Website" />
     </Helmet> 
     <main>  
         <div className="title text-center">
-    <h1 className="display-1">lifestyle <span className="display-5 text-secondary">gallery</span></h1></div>
+    <h1 className="display-1">boudoir <span className="display-5 text-secondary">gallery</span></h1></div>
     <div className="container px-xs-1 py-xs-1 px-md-3 py-5-md"><br /></div>
     <Gallery style={{padding: '10px'}} photos={photos} direction={"column"} onClick={openLightbox} />
     <div>

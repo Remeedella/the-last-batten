@@ -1,8 +1,19 @@
 module.exports = {
   siteMetadata: {
     title: "The Last Batten",
+    
     siteUrl: "https://www.thelastbatten.com",
     description: "the last batten photography website",
+        menuLinks:[
+           {
+               name:'home',
+               link:'/'
+            },
+            {
+               name:'lifestyle',
+               link:'/galleries/lifestyle'
+            }
+          ]
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -25,7 +36,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Bebas Neue`,
+          `Playfair Display\:400`,
           `source sans pro\:200,300,400`, // you can also specify font weights and styles
           `Parisienne`,
         ],

@@ -55,13 +55,19 @@ a {
   padding-right: 7px;
 }
 
-#content {
-    min-height: 100vh;
-}
-
 .title {
     font-family: 'Parisienne', cursive;
     color: #9E94BE;
+}
+
+.titlepf {
+    font-family: 'Playfair Display', serif;
+}
+
+main {
+    min-height: 68vh;
+    height: 100%;
+    height: auto !important;
 }
 
 // 6. -media queries - //
