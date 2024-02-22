@@ -32,17 +32,13 @@ module.exports = {
       },
       __key: "pages",
     },
+   
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: 'gatsby-plugin-preconnect',
       options: {
-        fonts: [
-          `Playfair Display\:400`,
-          `source sans pro\:200,300,400`, // you can also specify font weights and styles
-          `Parisienne`,
-        ],
-        display: 'swap'
-      }
-    }
+        domains: ['https://source.unsplash.com', 'https://images.unsplash.com'],
+      },
+    },
     
   ],
   

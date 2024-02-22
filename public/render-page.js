@@ -3202,12 +3202,11 @@ var plugins = [{
     "plugins": []
   }
 }, {
-  name: 'gatsby-plugin-google-fonts',
-  plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-google-fonts/gatsby-ssr */ "./node_modules/gatsby-plugin-google-fonts/gatsby-ssr.js"),
+  name: 'gatsby-plugin-preconnect',
+  plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-preconnect/gatsby-ssr */ "./node_modules/gatsby-plugin-preconnect/gatsby-ssr.js"),
   options: {
     "plugins": [],
-    "fonts": ["Playfair Display:400", "source sans pro:200,300,400", "Parisienne"],
-    "display": "swap"
+    "domains": ["https://source.unsplash.com", "https://images.unsplash.com"]
   }
 }];
 /* global plugins */
@@ -4547,47 +4546,6 @@ function stripPrefix(str, prefix = ``) {
 
 /***/ }),
 
-/***/ "./node_modules/gatsby-plugin-google-fonts/gatsby-ssr.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/gatsby-plugin-google-fonts/gatsby-ssr.js ***!
-  \***************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-var _react = __webpack_require__(/*! react */ "react");
-var _react2 = _interopRequireDefault(_react);
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    default: obj
-  };
-}
-var format = function format(string) {
-  return string.split(' ').map(function (s) {
-    return s.replace(/^\w/, function (s) {
-      return s.toUpperCase();
-    });
-  }).join(' ');
-};
-var getFonts = function getFonts(options) {
-  return options.fonts.map(format).join('|').replace(/ /g, '+');
-};
-function getDisplay(options) {
-  return options.display ? '&display=' + options.display : '';
-}
-exports.onRenderBody = function (_ref, options) {
-  var setHeadComponents = _ref.setHeadComponents;
-  var link = 'https://fonts.googleapis.com/css?family=' + getFonts(options) + getDisplay(options);
-  setHeadComponents([_react2.default.createElement('link', {
-    key: 'fonts',
-    href: link,
-    rel: 'stylesheet'
-  })]);
-};
-
-/***/ }),
-
 /***/ "./node_modules/gatsby-plugin-image/gatsby-ssr.js":
 /*!********************************************************!*\
   !*** ./node_modules/gatsby-plugin-image/gatsby-ssr.js ***!
@@ -4636,6 +4594,88 @@ function onRenderBody(_ref) {
   })]);
 }
 exports.onRenderBody = onRenderBody;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-preconnect/gatsby-ssr.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-preconnect/gatsby-ssr.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+exports.__esModule = true;
+exports.onRenderBody = void 0;
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+var _utils = __webpack_require__(/*! ./utils */ "./node_modules/gatsby-plugin-preconnect/utils.js");
+var onRenderBody = function onRenderBody(_ref, pluginOptions) {
+  var setHeadComponents = _ref.setHeadComponents;
+  var domainList = pluginOptions.domains;
+  if (!pluginOptions || !domainList) {
+    throw new Error('gatsby-plugin-preconnect: Missing `options.domains`');
+  }
+  if (!Array.isArray(domainList)) {
+    throw new Error('gatsby-plugin-preconnect: `options.domains` is not an array');
+  }
+  var parsedDomains = (0, _utils.removeDuplicates)((0, _utils.parseOptions)(domainList));
+  setHeadComponents(parsedDomains.map(function (_ref2) {
+    var domain = _ref2.domain,
+      crossOrigin = _ref2.crossOrigin;
+    return /*#__PURE__*/_react.default.createElement('link', {
+      crossOrigin: crossOrigin,
+      href: domain,
+      key: domain + "-" + crossOrigin,
+      rel: 'preconnect'
+    });
+  }));
+};
+exports.onRenderBody = onRenderBody;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-preconnect/utils.js":
+/*!********************************************************!*\
+  !*** ./node_modules/gatsby-plugin-preconnect/utils.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.removeDuplicates = exports.parseOptions = void 0;
+var parseOptions = function parseOptions(domainOptions) {
+  return domainOptions.map(function (domainOption) {
+    var domain = typeof domainOption === 'string' ? domainOption : domainOption.domain;
+    if (!domain) {
+      throw new Error("gatsby-plugin-preconnect: cannot parse `domain` from " + domainOption + ". Expected a string or `{domain: string}`");
+    }
+    var crossOrigin = domainOption.crossOrigin === undefined ? true : domainOption.crossOrigin;
+    if (crossOrigin !== false && crossOrigin !== true && crossOrigin !== '' && crossOrigin !== 'anonymous' && crossOrigin !== 'use-credentials') {
+      throw new Error("gatsby-plugin-preconnect: cannot parse `crossOrigin` from " + domainOption.crossOrigin + ". Expected `undefined`, ``, `false`, `true`, `anonymous`, or `use-credentials`.");
+    }
+    crossOrigin = crossOrigin === true ? '' : crossOrigin;
+    return {
+      domain: domain,
+      crossOrigin: crossOrigin
+    };
+  });
+};
+exports.parseOptions = parseOptions;
+var removeDuplicates = function removeDuplicates(domainOptions) {
+  return domainOptions.filter(function (currentDomainOption, i) {
+    for (var j = 0; j < i; j++) {
+      if (currentDomainOption.crossOrigin === domainOptions[j].crossOrigin && currentDomainOption.domain === domainOptions[j].domain) {
+        return false;
+      }
+    }
+    return true;
+  });
+};
+exports.removeDuplicates = removeDuplicates;
 
 /***/ }),
 

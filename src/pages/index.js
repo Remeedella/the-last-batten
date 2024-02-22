@@ -30,6 +30,7 @@ export default function Home() {
 <meta name="description" content="Photography & Videography Website" />
     </Helmet>
     <div className="container px-xs-1 py-xs-1 px-md-3 py-5-md"><br /></div>    
+   
     <Gallery photos={photos} direction={"column"} onClick={openLightbox} />
     <div>
       <ModalGateway>
@@ -46,6 +47,7 @@ export default function Home() {
           </Modal>
         ) : null}
       </ModalGateway>
+      
     </div>
     </main>
     <Footer />
